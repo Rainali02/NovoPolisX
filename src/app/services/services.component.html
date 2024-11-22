@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovoPolisX - Services</title>
+    <style>
+        body {
+            background-image: url('assets/images/new.gif');
+            height: auto;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            text-align: center;
+            position: relative;
+            padding-top: 60px; 
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 10px 0;
+            margin-bottom: 10px;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .service-card {
+            background: rgba(146, 143, 143, 0.322);
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        .service-card img {
+            width: 100%;
+            height: auto;
+        }
+        .service-card h3 {
+            margin: 15px;
+        }
+        .service-card p {
+            margin: 0 15px 15px;
+            color: #e3dbdb;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- <div class="navbar">
+        <a href="home.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="login.html" id="logout">Logout</a>
+        <div class="user-info" id="user-info"></div>
+    </div> -->
+
+    <div class="container">
+        <h1>Our Services</h1>
+        <div class="services-grid">
+            <div (click)="navigate('about-city')" class="service-card">
+                <img src="assets/images/7.webp" alt="About the City">
+                <h3>About the City</h3>
+                <p>Learn about the history, culture, and what makes our city unique.</p>
+            </div>
+            <div (click)="navigate('tourist-places')" class="service-card">
+                <img src="assets/images/tourist.png" alt="Tourist Places">
+                <h3>Tourist Places</h3>
+                <p>Discover amazing tourist attractions that you can't miss!</p>
+            </div>
+            <div (click)="navigate('hotels')" class="service-card">
+                <img src="assets/images/hotels.png" alt="Hotels">
+                <h3>Hotels</h3>
+                <p>Find the best places to stay during your visit.</p>
+            </div>
+            <div (click)="navigate('jobs')" class="service-card">
+                <img src="assets/images/4.jpg" alt="Jobs">
+                <h3>Jobs</h3>
+                <p>Explore job opportunities in various sectors in the city.</p>
+            </div>
+            <div (click)="navigate('universities')" class="service-card">
+                <img src="assets/images/5.jfif" alt="Universities/Colleges">
+                <h3>Universities/Colleges</h3>
+                <p>Learn about higher education institutions available in the city.</p>
+            </div>
+            <div (click)="navigate('events')" class="service-card">
+                <img src="assets/images/event.png" alt="Events">
+                <h3>Events</h3>
+                <p>Stay updated on live and incoming events happening around the city.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const username = localStorage.getItem('username') || "Guest"; 
+        document.getElementById('user-info').textContent = `Logged in as: ${username}`;
+    </script>
+
+</body>
+</html>
