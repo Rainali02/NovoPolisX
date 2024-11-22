@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobs - NovoPolisX</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url('assets/images/bg.gif');
+            height: auto;
+             background-size: cover;
+            background-position: center;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: #34495e;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin-right: 15px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: #2980b9;
+        }
+
+        .navbar .user-info {
+            float: right;
+            color: white;
+        }
+
+        /* Container */
+        .container {
+            /* margin: 120px auto; */
+            margin-left: 30px;
+            margin-right: 10px;
+            max-width: 1200px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.331);
+            border-radius: 8px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        p {
+            font-size: 18px;
+            color: #7f8c8d;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* Job Cards */
+        .job-card {
+            background-color: #ffffff5e;
+            margin-bottom: 25px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .job-card h3 {
+            color: #34495e;
+            font-size: 24px;
+        }
+
+        .job-card .company-name {
+            color: #1a1b1b;
+            font-weight: bold;
+        }
+
+        .job-card .job-info {
+            font-size: 16px;
+            color: #7f8c8d;
+        }
+
+        .job-card .location {
+            color: #0d0d0d;
+            font-weight: bold;
+        }
+
+        .job-card .map-container {
+            height: 200px;
+            margin-top: 10px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .explore-btn {
+            background-color: #1f2020;
+            color: white;
+            padding: 12px 20px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-top: 15px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .explore-btn:hover {
+            background-color: #515354;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .job-card {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+     <!-- Jobs Container -->
+    <div class="container">
+        <h1>Job Openings in Nagpur</h1>
+        <p>Explore job opportunities in various sectors in Nagpur.</p>
+
+        <!-- Job Card 1 -->
+        <div class="job-card">
+            <h3>Software Developer</h3>
+            <p class="company-name">XYZ Technologies Pvt. Ltd.</p>
+            <p class="job-info"><strong>Role:</strong> Software Developer</p>
+            <p class="job-info"><strong>Responsibilities:</strong> Develop and maintain web applications, collaborate with teams, debug and test code, contribute to product improvements.</p>
+            <p class="job-info"><strong>Required Skills:</strong> HTML, CSS, JavaScript, React, Node.js</p>
+            <p class="job-info"><strong>Experience:</strong> 2-3 years</p>
+            <p class="location"><strong>Location:</strong> Nagpur, Maharashtra</p>
+            <p class="job-info"><strong>Contact:</strong> HR - Ramesh Verma | <a href="mailto:ramesh&#64;xyztech.com">ramesh&#64;xyztech.com</a></p>
+
+            <!-- Location Map -->
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.529327776158!2d79.0997254152797!3d21.145445084803726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4e1d6a746cc67%3A0x7cfb73bff56aeb28!2sXYZ%20Technologies%2C%20Nagpur!5e0!3m2!1sen!2sin!4v1637018394591!5m2!1sen!2sin" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+            <a href="https://www.xyztech.com/careers" class="explore-btn" target="_blank">Explore More</a>
+        </div>
+
+        <!-- Job Card 2 -->
+        <div class="job-card">
+            <h3>Marketing Manager</h3>
+            <p class="company-name">ABC Corp.</p>
+            <p class="job-info"><strong>Role:</strong> Marketing Manager</p>
+            <p class="job-info"><strong>Responsibilities:</strong> Develop marketing strategies, lead campaigns, manage a team, analyze market trends, and improve brand visibility.</p>
+            <p class="job-info"><strong>Required Skills:</strong> Marketing, SEO, Digital Advertising, Leadership</p>
+            <p class="job-info"><strong>Experience:</strong> 4-5 years</p>
+            <p class="location"><strong>Location:</strong> Nagpur, Maharashtra</p>
+            <p class="job-info"><strong>Contact:</strong> HR - Sneha Patel | <a href="mailto:sneha&#64;abccorp.com">sneha&#64;abccorp.com</a></p>
+
+            <!-- Location Map -->
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.529327776158!2d79.0982451152797!3d21.146678084803726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4e1d6a746cc67%3A0x7cfb73bff56aeb28!2sABC%20Corp.%2C%20Nagpur!5e0!3m2!1sen!2sin!4v1637018494591!5m2!1sen!2sin" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+            <a href="https://www.abccorp.com/careers" class="explore-btn" target="_blank">Explore More</a>
+        </div>
+
+        <!-- More Job Cards Can Be Added Here -->
+    </div>
+
+    <script>
+        const username = localStorage.getItem('username') || "Guest";
+        document.getElementById('user-info').textContent = `Logged in as: ${username}`;
+
+        document.getElementById('logout').addEventListener('click', () => {
+            localStorage.removeItem('username');
+            window.location.href = 'login.html';
+        });
+    </script>
+
+</body>
+</html>

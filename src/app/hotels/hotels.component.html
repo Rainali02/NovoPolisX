@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotels in Nagpur - NovoPolisX</title>
+    <style>
+        /* Global Styles */
+        body {
+            background-image: url('assets/images/bg.gif');
+            height: auto;
+            background-size: cover;
+            background-position: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .navbar {
+            background-color: #333;
+            padding: 10px 15px;
+            text-align: center;
+        }
+
+        .navbar a {
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 15px;
+            display: inline-block;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .user-info {
+            color: white;
+            float: right;
+            padding: 10px 15px;
+            font-weight: bold;
+        }
+
+        /* Container and Title */
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.466);
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.2em;
+            text-align: center;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1.1em;
+            text-align: center;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        /* Hotel Grid Layout */
+        .hotel-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.148);
+        }
+
+        /* Hotel Card */
+        .hotel {
+            background-color: #b1afaf4f;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #ddddddeb;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .hotel:hover {
+            transform: translateY(-8px);
+        }
+
+        .hotel h2 {
+            font-size: 1.4em;
+            color: #444;
+            margin-bottom: 10px;
+        }
+
+        .hotel img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .hotel-details {
+            font-size: 1em;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .facilities {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 15px;
+        }
+
+        .facilities li {
+            font-size: 0.95em;
+            margin-bottom: 6px;
+        }
+
+        .map {
+            margin: 10px 0;
+            border: 1px solid #f9f9f9;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        iframe {
+            width: 100%;
+            height: 150px;
+        }
+
+        /* Media Queries for Responsive Design */
+        @media screen and (max-width: 768px) {
+            .hotel-grid {
+                grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Hotels in Nagpur</h1>
+        <p>Explore the best hotels in Nagpur with their facilities, contact information, and locations.</p>
+
+        <!-- Hotel Grid -->
+        <div class="hotel-grid">
+
+            <!-- Hotel 1: Hotel Orange City -->
+            <div class="hotel">
+                <h2>Hotel Orange City</h2>
+                <img src="assets/images/hotel-Orange-City.jpg" alt="Hotel Orange City">
+                <div class="hotel-details">
+                    <p><strong>Address:</strong> 45/6, Civil Lines, Nagpur, Maharashtra 440001</p>
+                    <p><strong>Contact:</strong> +91 712 250 1111</p>
+                    <p><strong>Facilities:</strong></p>
+                    <ul class="facilities">
+                        <li>Free Wi-Fi</li>
+                        <li>Swimming Pool</li>
+                        <li>Restaurant</li>
+                        <li>Fitness Center</li>
+                        <li>Conference Room</li>
+                        <li>24/7 Room Service</li>
+                    </ul>
+                </div>
+                <!-- Mini Map -->
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.637472888972!2d79.08785581501678!3d21.140253885876903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4e1548916314%3A0x5e5a3ab4bc5d1b4e!2sRaman%20Science%20Centre!5e0!3m2!1sen!2sin!4v1636499261603!5m2!1sen!2sin" frameborder="0" allowfullscreen=""></iframe>
+                </div>
+            </div>
+
+            <!-- Hotel 2: Hotel Centre Point -->
+            <div class="hotel">
+                <h2>Hotel Centre Point</h2>
+                <img src="assets/images/hotel-center-point.jfif" alt="Hotel Centre Point">
+                <div class="hotel-details">
+                    <p><strong>Address:</strong> 72, Central Avenue Road, Nagpur, Maharashtra 440018</p>
+                    <p><strong>Contact:</strong> +91 712 256 7000</p>
+                    <p><strong>Facilities:</strong></p>
+                    <ul class="facilities">
+                        <li>Free Parking</li>
+                        <li>Bar</li>
+                        <li>Restaurant</li>
+                        <li>Conference Hall</li>
+                        <li>Airport Shuttle</li>
+                        <li>In-Room Dining</li>
+                    </ul>
+                </div>
+                <!-- Mini Map -->
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3158.111331951272!2d79.07675411501684!3d21.14822938590702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4e172f651e6d9%3A0x240b6e836bcd6ee1!2s72%2C%20Central%20Avenue%20Road%2C%20Nagpur%2C%20Maharashtra%20440018!5e0!3m2!1sen!2sin!4v1698542593180!5m2!1sen!2sin" frameborder="0" allowfullscreen=""></iframe>
+                </div>
+            </div>
+
+            <!-- Hotel 3: Hotel Tuli Imperial -->
+            <div class="hotel">
+                <h2>Hotel Tuli Imperial</h2>
+                <img src="assets/images/hotel-tuli.jpg" alt="Hotel Tuli Imperial">
+                <div class="hotel-details">
+                    <p><strong>Address:</strong> 13, Wardha Road, Nagpur, Maharashtra 440015</p>
+                    <p><strong>Contact:</strong> +91 712 252 1212</p>
+                    <p><strong>Facilities:</strong></p>
+                    <ul class="facilities">
+                        <li>Luxury Rooms</li>
+                        <li>Free Breakfast</li>
+                        <li>Poolside Bar</li>
+                        <li>Fitness Center</li>
+                        <li>Parking Available</li>
+                        <li>Airport Transfers</li>
+                    </ul>
+                </div>
+                <!-- Mini Map -->
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.617092755274!2d79.08154341501675!3d21.145249385893496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4e1c83acb2b9b%3A0x1b2c21d10c8b87f1!2s13%2C%20Wardha%20Road%2C%20Nagpur%2C%20Maharashtra%20440015!5e0!3m2!1sen!2sin!4v1698542754311!5m2!1sen!2sin" frameborder="0" allowfullscreen=""></iframe>
+                </div>
+            </div>
+
+            <!-- Hotel 4: The Pride Hotel -->
+            <div class="hotel">
+                <h2>The Pride Hotel</h2>
+                <img src="assets/images/hotel-pride.jfif" alt="The Pride Hotel">
+                <div class="hotel-details">
+                    <p><strong>Address:</strong> NH-6, Near Asha Talkies, Nagpur, Maharashtra 440022</p>
+                    <p><strong>Contact:</strong> +91 712 280 2233</p>
+                    <p><strong>Facilities:</strong></p>
+                    <ul class="facilities">
+                        <li>Multi-Cuisine Restaurant</li>
+                        <li>Free Wi-Fi</li>
+                        <li>Swimming Pool</li>
+                        <li>Fitness Center</li>
+                        <li>Spa and Wellness Center</li>
+                        <li>Business Center</li>
+                    </ul>
+                </div>
+                <!-- Mini Map -->
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3158.5616245293367!2d79.0921370150167!3d21.15783608588662!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4e2ffb3a37865%3A0xd13c75f66e4c29b6!2sNH-6%2C%20Near%20Asha%20Talkies%2C%20Nagpur%2C%20Maharashtra%20440022!5e0!3m2!1sen!2sin!4v1698542952785!5m2!1sen!2sin" frameborder="0" allowfullscreen=""></iframe>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        const username = localStorage.getItem('username') || "Guest";
+        document.getElementById('user-info').textContent = `Welcome, ${username}`;
+
+        // Handle Logout
+        document.getElementById('logout').addEventListener('click', function() {
+            localStorage.removeItem('username');
+            window.location.href = "login.html";
+        });
+    </script>
+
+</body>
+</html>

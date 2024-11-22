@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourist Places - NovoPolisX</title>
+    <style>
+        body {
+             background-image: url('assets/images/bg.gif');
+            height: auto;
+             background-size: cover;
+            background-position: center;
+            
+           
+            color: #0e0d0d;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #000;
+            padding: 15px;
+            text-align: center;
+            border-bottom: 2px solid #444;
+        }
+        .navbar a {
+            color: #f4f4f4;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .user-info {
+            margin-top: 10px;
+            color: #f4f4f4;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f3eeee3c;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        h1 {
+            color: #131313ec;
+            text-align: center;
+        }
+        .tourist-place {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            background: #f1efef;
+            display: flex;
+            flex-direction: column;
+            height: 400px;
+        }
+        .tourist-place img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .tourist-info {
+            padding: 15px;
+            flex-grow: 1;
+        }
+        .tourist-info h2 {
+            color: #000;
+        }
+        .tourist-info p {
+            color: #0e0d0d;
+        }
+        .map {
+            margin: 10px 0;
+            border: 1px solid #f9f9f9;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        iframe {
+            width: 100%;
+            height: 150px;
+        }
+        /* Position the user icon in the top right corner */
+        .user-icon {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            color: #f4f4f4;
+            background-color: #000;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        /* On hover, change icon color */
+        .user-icon:hover {
+            color: #ffcc00;
+        }
+        @media (max-width: 600px) {
+            .navbar {
+                padding: 10px;
+            }
+            .navbar a {
+                margin: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class ="container"> <h1>Tourist Places in Nagpur</h1>
+    <p>Discover amazing tourist attractions that you can't miss!</p>
+    
+</div>
+    <div class="container">
+       
+        <div class="tourist-place">
+            <img src="assets/images/dikshabhoomi.jfif" alt="Deekshabhoomi">
+            <div class="tourist-info">
+                <h2>Deekshabhoomi</h2>
+                <p>A significant pilgrimage site for Buddhists, Deekshabhoomi is where Dr. B.R. Ambedkar converted to Buddhism.</p>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.1231091345226!2d79.10021961501636!3d21.128270485988554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4e0e9b31f1ab3%3A0x19896f5f7d31e73f!2sDeekshabhoomi!5e0!3m2!1sen!2sin!4v1636499196533!5m2!1sen!2sin" frameborder="0" allowfullscreen=""></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="tourist-place">
+            <img src="assets/images/ramanscience.jfif" alt="Raman Science Centre">
+            <div class="tourist-info">
+                <h2>Raman Science Centre</h2>
+                <p>This interactive science museum promotes scientific knowledge through engaging exhibits and demonstrations.</p>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.637472888972!2d79.08785581501678!3d21.140253885876903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4e1548916314%3A0x5e5a3ab4bc5d1b4e!2sRaman%20Science%20Centre!5e0!3m2!1sen!2sin!4v1636499261603!5m2!1sen!2sin" frameborder="0" allowfullscreen=""></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="tourist-place">
+            <img src="assets/images/futalalake.jfif" alt="Futala Lake">
+            <div class="tourist-info">
+                <h2>Futala Lake</h2>
+                <p>A picturesque lake known for its stunning views, especially at sunset. It’s a great spot for leisurely strolls.</p>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.6870893863975!2d79.0873144150166!3d21.13990828587885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4e17b382f33b%3A0x6cbcd45b92921f75!2sFutala%20Lake!5e0!3m2!1sen!2sin!4v1636499329712!5m2!1sen!2sin" frameborder="0" allowfullscreen=""></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="tourist-place">
+            <img src="assets/images/ambazari.jfif" alt="Ambazari Lake">
+            <div class="tourist-info">
+                <h2>Ambazari Lake</h2>
+                <p>This beautiful lake is ideal for recreational activities and features a park perfect for families.</p>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.7340164825213!2d79.09029151501656!3d21.136456385879153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4e173e19df39%3A0x40b7e8e8d300de0d!2sAmbazari%20Lake!5e0!3m2!1sen!2sin!4v1636499391410!5m2!1sen!2sin" frameborder="0" allowfullscreen=""></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="tourist-place">
+            <img src="assets/images/zeromile.jfif" alt="Zero Mile Stone">
+            <div class="tourist-info">
+                <h2>Zero Mile Stone</h2>
+                <p>This historical monument marks the geographical center of India. It’s a beautiful spot to learn about the history of Nagpur.</p>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.9151171664677!2d79.09314981501667!3d21.145960785885583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4e11b88f1e65%3A0xaff04cb1042c5d7d!2sZero%20Mile%20Stone!5e0!3m2!1sen!2sin!4v1636499471563!5m2!1sen!2sin" frameborder="0" allowfullscreen=""></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="tourist-place">
+            <img src="assets/images/mahatmagandhipark.jfif" alt="Mahatma Gandhi Park">
+            <div class="tourist-info">
+                <h2>Mahatma Gandhi Park</h2>
+                <p>A lovely park ideal for relaxation and leisure activities, featuring beautiful greenery and walking paths.</p>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.8549151662074!2d79.10615741501676!3d21.14205678588307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4e10e0c647f07%3A0x7e9e9f34e8e3dc67!2sMahatma%20Gandhi%20Park!5e0!3m2!1sen!2sin!4v1636499563198!5m2!1sen!2sin" frameborder="0" allowfullscreen=""></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="tourist-place">
+            <img src="assets/images/citycentermall.jfif" alt="City Center Mall">
+            <div class="tourist-info">
+                <h2>City Center Mall</h2>
+                <p>One of the largest shopping destinations in Nagpur, featuring various brands, restaurants, and entertainment options.</p>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.6474201614574!2d79.11029731501678!3d21.139572785876637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4e115cbb57e6b%3A0x63495e18eaf15fc1!2sCity%20Center%20Mall!5e0!3m2!1sen!2sin!4v1636499648946!5m2!1sen!2sin" frameborder="0" allowfullscreen=""></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="tourist-place">
+            <img src="assets/images/empressmall.jfif" alt="Empress Mall">
+            <div class="tourist-info">
+                <h2>Empress Mall</h2>
+                <p>A popular mall featuring numerous shops, food courts, and a cinema. A great place for entertainment and shopping.</p>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.545706265475!2d79.10559931501687!3d21.145006785883244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4e12540e4a99%3A0x2b32b7c4af1e8b61!2sEmpress%20Mall!5e0!3m2!1sen!2sin!4v1636499703145!5m2!1sen!2sin" frameborder="0" allowfullscreen=""></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="tourist-place">
+            <img src="assets/images/jainmandir.jfif" alt="Jain Mandir">
+            <div class="tourist-info">
+                <h2>Jain Mandir</h2>
+                <p>A beautiful Jain temple known for its exquisite architecture and serene environment.</p>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.7245655857193!2d79.06790531501654!3d21.137230185878926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4e1a9b11027b7%3A0x2a1f1d1d2f39be02!2sJain%20Mandir!5e0!3m2!1sen!2sin!4v1636499764590!5m2!1sen!2sin" frameborder="0" allowfullscreen=""></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="tourist-place">
+            <img src="assets/images/ramtekfort.jfif" alt="Ramtek Fort">
+            <div class="tourist-info">
+                <h2>Ramtek Fort</h2>
+                <p>A historic fort offering panoramic views and a glimpse into the rich history of the region.</p>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.949434424183!2d79.11643621501685!3d21.15218078588464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4e1a92f339c77%3A0x7fba1e80ec764bc1!2sRamtek%20Fort!5e0!3m2!1sen!2sin!4v1636499817200!5m2!1sen!2sin" frameborder="0" allowfullscreen=""></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="tourist-place">
+            <img src="assets/images/maharajbaug.jfif" alt="Maharaj Bagh Zoo">
+            <div class="tourist-info">
+                <h2>Maharaj Bagh Zoo</h2>
+                <p>A historical garden and zoo showcasing a variety of animals and birds, perfect for family outings.</p>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.6468538767454!2d79.08573161501683!3d21.13888298587658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4e10e33f3f77%3A0x7cd90929ebce1c2c!2sMaharaj%20Bagh%20Zoo!5e0!3m2!1sen!2sin!4v1636499875005!5m2!1sen!2sin" frameborder="0" allowfullscreen=""></iframe>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const username = localStorage.getItem('username') || "Guest";
+        document.getElementById('user-info').textContent = `Logged in as: ${username}`;
+    </script>
+
+</body>
+</html>

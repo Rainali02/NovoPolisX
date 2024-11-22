@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universities/Colleges - NovoPolisX</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="styles.css"> Assuming you have a separate CSS file -->
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+
+            background-image: url('assets/images/bg.gif');
+            height: auto;
+             background-size: cover;
+            background-position: center; 
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: #34495e;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin-right: 15px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: #2980b9;
+        }
+
+        .navbar .user-info {
+            float: right;
+            color: white;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .navbar .user-info i {
+            margin-right: 8px;
+        }
+
+        /* Container */
+        .container {
+            margin: 5px auto 30px;
+            max-width: 1200px;
+            background-color: rgba(255, 255, 255, 0.276);
+            border-radius: 8px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        h2 {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: #2980b9;
+        }
+
+        p {
+            font-size: 18px;
+            color: #7f8c8d;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* University/College Cards */
+        .university-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            justify-content: center;
+        }
+
+        .university-card {
+            background-color: #ffffff45;
+            width: 280px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .university-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .university-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-bottom: 2px solid #ecf0f1;
+        }
+
+        .university-card h3 {
+            font-size: 22px;
+            color: #2c3e50;
+            margin: 15px 0;
+            text-align: center;
+        }
+
+        .university-info {
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .university-info p {
+            margin-bottom: 5px;
+        }
+
+        .explore-btn {
+            margin-top: auto;
+            padding: 10px 20px;
+            background-color: #191a1b;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .explore-btn:hover {
+            background-color: #1f2121;
+        }
+
+        /* Table Styles for Courses */
+        table {
+            width: 100%;
+            margin: 15px 0;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #ecf0f1;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #34495e;
+            color: white;
+        }
+
+        td {
+            background-color: #ecf0f1;
+        }
+
+        /* Map Section */
+        .university-map {
+            margin-top: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+            height: 200px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* User Icon */
+        .user-icon {
+            font-size: 20px;
+            color: white;
+            background-color: #2980b9;
+            border-radius: 50%;
+            padding: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 15px;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .university-card {
+                width: 100%;
+            }
+
+            .navbar a {
+                padding: 12px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Universities Container -->
+    <div class="container">
+        <h1>Universities and Colleges in Nagpur</h1>
+        <p>Explore the top universities and colleges offering quality education in Nagpur.</p>
+
+        <!-- University Cards Section -->
+        <section>
+            <h2>Top Universities</h2>
+            <div class="university-box">
+                <!-- University Card 1 -->
+                <div class="university-card">
+                    <img src="assets/images/rtmnu.jfif" alt="University 1">
+                    <h3>Rashtrasant Tukadoji Maharaj Nagpur University</h3>
+                    <div class="university-info">
+                        <p><strong>Established:</strong> 1923</p>
+                        <p><strong>Type:</strong> Public University</p>
+                    </div>
+        
+                    <!-- Courses Table -->
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Course</th>
+                                <th>Duration</th>
+                                <th>Fees (INR)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>B.A.</td>
+                                <td>3 years</td>
+                                <td>₹25,000</td>
+                            </tr>
+                            <tr>
+                                <td>B.Sc.</td>
+                                <td>3 years</td>
+                                <td>₹30,000</td>
+                            </tr>
+                            <tr>
+                                <td>M.A.</td>
+                                <td>2 years</td>
+                                <td>₹40,000</td>
+                            </tr>
+                            <tr>
+                                <td>M.Sc.</td>
+                                <td>2 years</td>
+                                <td>₹45,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+        
+                    <!-- University Location Map -->
+                    <div class="university-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.5872603282282283!2d79.0948433150468!3d21.14570088677424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4e1d29c0286db%3A0x6138d8d3b03e2adf!2sCentral%20Park%2C%20Nagpur!5e0!3m2!1sen!2sin!4v1636993185427!5m2!1sen!2sin"></iframe>
+                    </div>
+        
+                    <!-- Explore More Button -->
+                    <a href="https://www.nagpuruniversity.ac.in" class="explore-btn" target="_blank">Explore More</a>
+                </div>
+        
+                <!-- University Card 2 -->
+                <div class="university-card">
+                    <img src="assets/images/nmu.jfif" alt="University 2">
+                    <h3>Shivaji Science College</h3>
+                    <div class="university-info">
+                        <p><strong>Established:</strong> 1960</p>
+                        <p><strong>Type:</strong> Government College</p>
+                    </div>
+        
+                    <!-- Courses Table -->
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Course</th>
+                                <th>Duration</th>
+                                <th>Fees (INR)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>B.Sc.</td>
+                                <td>3 years</td>
+                                <td>₹20,000</td>
+                            </tr>
+                            <tr>
+                                <td>M.Sc.</td>
+                                <td>2 years</td>
+                                <td>₹30,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+        
+                    <!-- University Location Map -->
+                    <div class="university-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.5732207466805!2d79.09663151504677!3d21.145085185944024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4e1d2f4f6ecfd%3A0x7c4bfaeb4fa2c6f4!2sShivaji%20Science%20College%2C%20Nagpur!5e0!3m2!1sen!2sin!4v1636993428950!5m2!1sen!2sin"></iframe>
+                    </div>
+        
+                    <!-- Explore More Button -->
+                    <a href="https://www.sscnagpur.org" class="explore-btn" target="_blank">Explore More</a>
+                </div>
+        
+                <!-- University Card 3 -->
+                <div class="university-card">
+                    <img src="assets/images/rtmnu.jfif" alt="University 3">
+                    <h3>NMU Nagpur</h3>
+                    <div class="university-info">
+                        <p><strong>Established:</strong> 1985</p>
+                        <p><strong>Type:</strong> Private University</p>
+                    </div>
+        
+                    <!-- Courses Table -->
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Course</th>
+                                <th>Duration</th>
+                                <th>Fees (INR)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>BBA</td>
+                                <td>3 years</td>
+                                <td>₹50,000</td>
+                            </tr>
+                            <tr>
+                                <td>MBA</td>
+                                <td>2 years</td>
+                                <td>₹60,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+        
+                    <!-- University Location Map -->
+                    <div class="university-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.5788651223277!2d79.0940868150468!3d21.14531902012974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4e1d7f7f848a7%3A0x7cf0735678ab5d6d!2sNMU%20Nagpur!5e0!3m2!1sen!2sin!4v1636994908425!5m2!1sen!2sin"></iframe>
+                    </div>
+        
+                    <!-- Explore More Button -->
+                    <a href="https://www.nmu.edu" class="explore-btn" target="_blank">Explore More</a>
+                </div>
+        
+                <!-- University Card 4 - Engineering College -->
+                <div class="university-card">
+                    <img src="assets/images/vnit.jfif" alt="University 4">
+                    <h3>Visvesvaraya National Institute of Technology (VNIT)</h3>
+                    <div class="university-info">
+                        <p><strong>Established:</strong> 1988</p>
+                        <p><strong>Type:</strong> Public Technical University</p>
+                    </div>
+        
+                    <!-- Courses Table -->
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Course</th>
+                                <th>Duration</th>
+                                <th>Fees (INR)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>B.Tech.</td>
+                                <td>4 years</td>
+                                <td>₹1,00,000</td>
+                            </tr>
+                            <tr>
+                                <td>M.Tech.</td>
+                                <td>2 years</td>
+                                <td>₹1,50,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+        
+                    <!-- University Location Map -->
+                    <div class="university-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.5869730285747!2d79.05908441504683!3d21.145177786650365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4e1d3bb73e47f%3A0x7f2583fd010053ac!2sVisvesvaraya%20National%20Institute%20of%20Technology!5e0!3m2!1sen!2sin!4v1636994875753!5m2!1sen!2sin"></iframe>
+                    </div>
+        
+                    <!-- Explore More Button -->
+                    <a href="https://www.vnit.ac.in" class="explore-btn" target="_blank">Explore More</a>
+                </div>
+        
+                <!-- University Card 5 - Medical College -->
+                <div class="university-card">
+                    <img src="assets/images/gmic.jfif" alt="University 5">
+                    <h3>Government Medical College, Nagpur</h3>
+                    <div class="university-info">
+                        <p><strong>Established:</strong> 1947</p>
+                        <p><strong>Type:</strong> Government Medical College</p>
+                    </div>
+        
+                    <!-- Courses Table -->
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Course</th>
+                                <th>Duration</th>
+                                <th>Fees (INR)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>MBBS</td>
+                                <td>5.5 years</td>
+                                <td>₹20,000 (Government)</td>
+                            </tr>
+                            <tr>
+                                <td>MD</td>
+                                <td>3 years</td>
+                                <td>₹1,00,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+        
+                    <!-- University Location Map -->
+                    <div class="university-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.5874066118906!2d79.07988841504682!3d21.149973386774196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4e1c77b4b0b0b%3A0x7b6f85b5d85a8d9e!2sGovernment%20Medical%20College%2C%20Nagpur!5e0!3m2!1sen!2sin!4v1636995895204!5m2!1sen!2sin"></iframe>
+                    </div>
+        
+                    <!-- Explore More Button -->
+                    <a href="https://www.gmc.edu.in" class="explore-btn" target="_blank">Explore More</a>
+                </div>
+                
+                <!-- University Card 6 - Law College -->
+                <div class="university-card">
+                    <img src="assets/images/dba.jfif" alt="University 6">
+                    <h3>Dr. Ambedkar Law College, Nagpur</h3>
+                    <div class="university-info">
+                        <p><strong>Established:</strong> 1992</p>
+                        <p><strong>Type:</strong> Law College</p>
+                    </div>
+        
+                    <!-- Courses Table -->
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Course</th>
+                                <th>Duration</th>
+                                <th>Fees (INR)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>LLB</td>
+                                <td>3 years</td>
+                                <td>₹25,000</td>
+                            </tr>
+                            <tr>
+                                <td>LLM</td>
+                                <td>2 years</td>
+                                <td>₹30,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+        
+                    <!-- University Location Map -->
+                    <div class="university-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.572987107702!2d79.08015431504679!3d21.147628886774156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4e1e835ce695f%3A0xd58f415f870a53b8!2sDr.%20Ambedkar%20Law%20College%2C%20Nagpur!5e0!3m2!1sen!2sin!4v1636996885606!5m2!1sen!2sin"></iframe>
+                    </div>
+        
+                    <!-- Explore More Button -->
+                    <a href="https://www.dalcnagpur.org" class="explore-btn" target="_blank">Explore More</a>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+
+    <script>
+        // Retrieve username from localStorage and update user info
+        const username = localStorage.getItem('username') || "Guest";
+        document.getElementById('username-display').textContent = username;
+
+        // Logout functionality
+        document.getElementById('logout').addEventListener('click', () => {
+            localStorage.removeItem('username');
+            window.location.href = 'login.html';
+        });
+    </script>
+
+</body>
+</html>

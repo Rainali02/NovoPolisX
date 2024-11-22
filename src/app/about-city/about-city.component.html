@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About the City - Nagpur</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- FontAwesome CDN -->
+    <style>
+        body {
+            background-image: url('assets/images/bg.gif');
+            height: auto;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            position: relative;
+            padding-top: 60px; 
+            margin: 0;
+            padding: 0;
+            color: #f4f4f4;
+        }
+
+        .navbar {
+            background-color: #000;
+            padding: 15px;
+            /* text-align: center; */
+            border-bottom: 2px solid #f2eded;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: #f4f4f4;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            color: #ffcc00;
+        }
+
+        /* User Info */
+        .user-info {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            display: flex;
+            align-items: center;
+            color: #f4f4f4;
+        }
+
+        .user-info .fa-user {
+            margin-right: 8px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 100px auto; /* Adjust for fixed navbar */
+            padding: 20px;
+            background-color: #f7efef3c;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            color: #131211;
+        }
+
+        h2 {
+            color: #0c0c0c;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #0e0d0d;
+        }
+
+        .slideshow {
+            position: relative;
+            max-width: 100%;
+            margin: 20px 0;
+            overflow: hidden;
+            border-radius: 8px;
+            height: 200px; /* Adjusted height */
+        }
+
+        .slideshow img {
+            width: 100%;
+            height: auto;
+            display: none;
+            border-radius: 8px;
+        }
+
+        .slideshow img.active {
+            display: block;
+        }
+
+        .media-section {
+            margin: 20px 0;
+        }
+
+        .media-section iframe {
+            max-width: 100%;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+
+        @media (max-width: 600px) {
+            .navbar {
+                padding: 10px;
+            }
+
+            .navbar a {
+                margin: 0 10px;
+            }
+
+            .user-info {
+                right: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- <div class="navbar">
+        <a href="src/app/about-city">Home</a>
+        <a href="src/app/services">Services</a>
+        <a href="src/app/login" id="logout">Logout</a>
+        <div class="user-info" id="user-info">
+            <i class="fas fa-user"></i>
+            <span id="username">Guest</span>
+        </div>
+    </div> -->
+
+    <div class="container">
+        <h1>About Nagpur City</h1>
+        
+        <h2>History</h2>
+        <p>Nagpur, located in the heart of India, has a rich and diverse history. It is believed to have been established in the 18th century by the Bhonsle dynasty. The city's name is derived from the Nag River, which flows through it. Nagpur was strategically important and served as the capital of the Central Provinces during British rule. The Sitabuldi Fort, constructed in 1853, is a significant historical landmark that witnessed numerous battles, including the pivotal conflict during the Second Anglo-Maratha War.</p>
+
+        <h2>Culture</h2>
+        <p>Nagpur is known for its rich cultural heritage and diversity. The city celebrates various festivals with great enthusiasm, including Diwali, Ganesh Chaturthi, and Makar Sankranti. The local cuisine reflects the region's flavors, with popular dishes like Tarri Poha and various types of sweets. Nagpur is also famous for its oranges, celebrated annually in the Orange Festival, which highlights the city’s agricultural significance.</p>
+
+        <h2>Current Information</h2>
+        <p>Today, Nagpur is one of the largest cities in Maharashtra and serves as a vital commercial and educational hub. It is home to several prestigious institutions, including the Visvesvaraya National Institute of Technology and Nagpur University. The city is witnessing rapid growth in the IT sector, contributing to its economic development.</p>
+
+        <div class="slideshow">
+            <img src="assets/images/about1.jpg" alt="Nagpur Image 1" class="active">
+            <img src="assets/images/about2.jpg" alt="Nagpur Image 2">
+            <img src="assets/images/about3.jfif" alt="Nagpur Image 3">
+            <img src="assets/images/about4.jfif" alt="Nagpur Image 4">
+            <img src="assets/images/about5.jfif" alt="Nagpur Image 5">
+            <img src="assets/images/about6.webp" alt="Nagpur Image 6">
+        </div>
+
+        <h2>Explore More</h2>
+        <p>For more information about Nagpur, visit the <a href="https://en.wikipedia.org/wiki/Nagpur" target="_blank" style="color: #ffcc00;">Wikipedia page</a>.</p>
+
+        <h2>Videos</h2>
+        <div class="media-section">
+            <h3>Explore Nagpur</h3>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script>
+        const username = localStorage.getItem('username') || "Guest";
+        document.getElementById('username').textContent = username; // Set the username dynamically
+
+        // Slideshow functionality
+        const slides = document.querySelectorAll('.slideshow img');
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) {
+                    slide.classList.add('active');
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+        }
+
+        // Auto slide every 5 seconds
+        setInterval(nextSlide, 5000);
+    </script>
+
+</body>
+</html>

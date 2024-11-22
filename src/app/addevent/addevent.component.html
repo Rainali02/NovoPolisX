@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - NovoPolisX</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Existing styles here... */
+        .container{
+            background-image: url('assets/images/new.gif');
+            background-size: cover;
+            background-position: center;
+            height: auto; 
+            display: flex;
+            
+        }
+        
+        /* Navbar Styles */
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            padding: 14px;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .navbar .user-info {
+            float: right;
+            color: #f2f2f2;
+            padding: 14px 20px;
+        }
+
+        .navbar .user-info .fa-user {
+            margin-right: 10px;
+        }
+        /* Add Event Form Styles */
+        .add-event-form {
+            background-color: rgba(255, 255, 255, 0.404);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 800px;
+            margin: 40px auto;
+        }
+
+        .add-event-form h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .add-event-form label {
+            font-size: 16px;
+            color: #333;
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        .add-event-form input,
+        .add-event-form textarea,
+        .add-event-form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .add-event-form button {
+            background-color: #171817;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .add-event-form button:hover {
+            background-color: #747674;
+        }
+
+        .add-event-form .error {
+            color: red;
+            font-size: 14px;
+        }
+
+    </style>
+</head>
+<body>
+
+   
+
+    <!-- Add Event Form Section -->
+    <div class="container">
+        <div class="add-event-form">
+            <h2>Add Your Event</h2>
+            <form id="event-form" (submit)="addEvent($event)">
+                <label for="event-name">Event Name</label>
+                <input type="text" id="event-name" name="event-name" required>
+
+                <label for="event-description">Event Description</label>
+                <textarea id="event-description" name="event-description" rows="4" required></textarea>
+
+                <label for="event-date">Event Date</label>
+                <input type="date" id="event-date" name="event-date" required>
+
+                <label for="event-time">Event Time</label>
+                <input type="time" id="event-time" name="event-time" required>
+
+                <label for="event-location">Event Location</label>
+                <input type="text" id="event-location" name="event-location" required>
+
+                <label for="ticket-limit">Ticket Limit</label>
+                <input type="number" id="ticket-limit" name="ticket-limit" min="1" required>
+
+                <label for="tickets-available">Tickets Available</label>
+                <input type="number" id="tickets-available" name="tickets-available" min="1" required>
+
+                <label for="event-image">Event Image URL (optional)</label>
+                <input type="url" id="event-image" name="event-image">
+
+                <button type="submit">Submit Event</button>
+            </form>
+            <div class="error" id="form-error"></div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to handle the form submission and validation
+        document.getElementById('event-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Clear previous error message
+            document.getElementById('form-error').textContent = "";
+
+            // Get form data
+            const eventName = document.getElementById('event-name').value;
+            const eventDescription = document.getElementById('event-description').value;
+            const eventDate = document.getElementById('event-date').value;
+            const eventTime = document.getElementById('event-time').value;
+            const eventLocation = document.getElementById('event-location').value;
+            const ticketLimit = document.getElementById('ticket-limit').value;
+            const ticketsAvailable = document.getElementById('tickets-available').value;
+            const eventImage = document.getElementById('event-image').value;
+
+            // Simple form validation (example)
+            if (!eventName || !eventDescription || !eventDate || !eventTime || !eventLocation || !ticketLimit || !ticketsAvailable) {
+                document.getElementById('form-error').textContent = "All fields except 'Event Image' are required.";
+                return;
+            }
+
+            // Prepare the event data (you would typically send this data to a server for processing)
+            const eventData = {
+                name: eventName,
+                description: eventDescription,
+                date: eventDate,
+                time: eventTime,
+                location: eventLocation,
+                ticketLimit: ticketLimit,
+                ticketsAvailable: ticketsAvailable,
+                image: eventImage
+            };
+
+            console.log('Event Data Submitted:', eventData);
+
+            // Notify user of successful submission (this could trigger an email to admin or store in DB)
+            alert("Your event has been submitted successfully. It will be reviewed by the admin before going live.");
+
+            // Reset the form after submission
+            document.getElementById('event-form').reset();
+        });
+    </script>
+
+</body>
+</html>
